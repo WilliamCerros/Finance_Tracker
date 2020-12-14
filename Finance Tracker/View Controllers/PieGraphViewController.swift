@@ -11,8 +11,10 @@ import Charts
 
 class PieGraphViewController: UIViewController {
 
-    @IBAction func test(_ sender: UIButton) {
-        print("Hello Pie Chart")
+    
+    @IBOutlet weak var pieChartView: PieChartView!
+    override func viewDidLoad() {
+        super.viewDidLoad()
         let user = Auth.auth().currentUser
         let db = Firestore.firestore()
         var expenseDictionary: [String: String] = [:]
@@ -42,19 +44,13 @@ class PieGraphViewController: UIViewController {
         for (category, value) in expenseDictionary {
             let percentageValue = (Double(value) ?? 0.0) / totalExpense
             entries.append(PieChartDataEntry(value: percentageValue, label: category))
-            colors.append(NSUIColor(red: 135.0, green: 135.0, blue: 135.0, alpha: 1.0))
+            colors.append(NSUIColor(red: 135.0, green: 135.0, blue: 135.0, alpha: 255.0))
         }
         let dataSet = PieChartDataSet( entries: entries, label: "")
         dataSet.colors = colors
         dataSet.drawValuesEnabled = false
         
         pieChartView.data = PieChartData(dataSet: dataSet)
-    }
-    
-    @IBOutlet weak var pieChartView: PieChartView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-       
         // Do any additional setup after loading the view.
     }
     
