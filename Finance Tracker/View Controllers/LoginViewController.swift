@@ -27,7 +27,7 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
         setUpElements()
         // TODO testing
-        signIn(email: "cerroswilliam@gmail.com", password: "qwer567*" )
+//        signIn(email: "cerroswilliam@gmail.com", password: "qwer567*" )
     }
     
     func setUpElements() {
