@@ -100,12 +100,13 @@ extension InputViewController: UIImagePickerControllerDelegate,
                     
                     var amountDueWithDate = amountDue + " " + currentDay
                     
-                    
+                 
                     // Update data base
                     let user = Auth.auth().currentUser
                     let db = Firestore.firestore()
                     let userRef = db.collection("users").document(user!.uid)
                     userRef.updateData(["expenses": FieldValue.arrayUnion([amountDueWithDate])])
+                    
                 }
             }
         }

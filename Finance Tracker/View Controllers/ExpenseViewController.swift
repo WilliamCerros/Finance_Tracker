@@ -24,9 +24,17 @@ class ExpenseViewController: UIViewController {
         let db = Firestore.firestore()
         
         
-        db.collection("users").document(user!.uid).collection("expenses").document().setData(["category" : category.text!
-                                                                                              , "value": expenseValue.text!,
-                                                                                              "description":   expenseDescription.text!,                                     "created": FieldValue.serverTimestamp(),  "updated": FieldValue.serverTimestamp()])
+        let date = Date()
+        let formatter = DateFormatter()
+        
+        formatter.dateFormat = "dd EE"
+        
+        let currentDay = formatter.string(from: date)
+        
+        let amountDueWithDate = expenseValue.text! + " " + currentDay
+        let userRef = db.collection("users").document(user!.uid)
+        userRef.updateData(["expenses": FieldValue.arrayUnion([amountDueWithDate])])
+
         AddExpenseButton.setTitle("Add Expense", for: .normal)
         expenseValue.text = ""
         expenseDescription.text = ""
