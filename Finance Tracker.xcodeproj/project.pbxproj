@@ -18,6 +18,8 @@
 		3DDBDF4D256B2659005585EF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDBDF4C256B2659005585EF /* HomeViewController.swift */; };
 		3DDBDF7F256B3D19005585EF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDBDF7E256B3D19005585EF /* Constants.swift */; };
 		3DDBDF84256B3D24005585EF /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDBDF83256B3D24005585EF /* Utilities.swift */; };
+		54A2435025874ECB001D5999 /* ExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A2434F25874ECB001D5999 /* ExpenseViewController.swift */; };
+		54A2435825875F51001D5999 /* PieGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A2435725875F51001D5999 /* PieGraphViewController.swift */; };
 		54F50BD12569D6400030F04C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F50BD02569D6400030F04C /* AppDelegate.swift */; };
 		54F50BD32569D6400030F04C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F50BD22569D6400030F04C /* SceneDelegate.swift */; };
 		54F50BD52569D6400030F04C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F50BD42569D6400030F04C /* ViewController.swift */; };
@@ -66,6 +68,8 @@
 		3DDBDF4C256B2659005585EF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3DDBDF7E256B3D19005585EF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3DDBDF83256B3D24005585EF /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		54A2434F25874ECB001D5999 /* ExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseViewController.swift; sourceTree = "<group>"; };
+		54A2435725875F51001D5999 /* PieGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieGraphViewController.swift; sourceTree = "<group>"; };
 		54F50BCD2569D6400030F04C /* Finance Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Finance Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F50BD02569D6400030F04C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54F50BD22569D6400030F04C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +136,8 @@
 				3D1515E425858E9A00B03FB5 /* FirstViewController.swift */,
 				3D1515E925858EA500B03FB5 /* SecondViewController.swift */,
 				3D1515EE25858EAF00B03FB5 /* ThirdViewController.swift */,
+				54A2434F25874ECB001D5999 /* ExpenseViewController.swift */,
+				54A2435725875F51001D5999 /* PieGraphViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -504,8 +510,10 @@
 				3D1515EA25858EA500B03FB5 /* SecondViewController.swift in Sources */,
 				3DC4CDBD257D8AF4009A5AD8 /* InputViewController.swift in Sources */,
 				54F50BD52569D6400030F04C /* ViewController.swift in Sources */,
+				54A2435025874ECB001D5999 /* ExpenseViewController.swift in Sources */,
 				54F50BD12569D6400030F04C /* AppDelegate.swift in Sources */,
 				3DDBDF43256B2636005585EF /* SignUpViewController.swift in Sources */,
+				54A2435825875F51001D5999 /* PieGraphViewController.swift in Sources */,
 				3DDBDF48256B2647005585EF /* LoginViewController.swift in Sources */,
 				3D1515E525858E9A00B03FB5 /* FirstViewController.swift in Sources */,
 				3DDBDF7F256B3D19005585EF /* Constants.swift in Sources */,

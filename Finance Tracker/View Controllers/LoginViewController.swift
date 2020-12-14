@@ -26,6 +26,8 @@ class LoginViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         setUpElements()
+        // TODO testing
+        signIn(email: "cerroswilliam@gmail.com", password: "qwer567*" )
     }
     
     func setUpElements() {
@@ -59,23 +61,26 @@ class LoginViewController: UIViewController {
             let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
             // Signing in the user
-            Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
-                
-                if error != nil {
-                    // Couldn't sign in
-                    self.errorLabel.text = error!.localizedDescription
-                    self.errorLabel.alpha = 1
-                }
-                else {
-                    
-                    let homeViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
-                    
-                    self.view.window?.rootViewController = homeViewController
-                    self.view.window?.makeKeyAndVisible()
-                }
-            }
+            signIn(email: email,password: password)
         }
     
+    func signIn(email: String,password: String ){
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            
+            if error != nil {
+                // Couldn't sign in
+                self.errorLabel.text = error!.localizedDescription
+                self.errorLabel.alpha = 1
+            }
+            else {
+                
+                let homeViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
+                
+                self.view.window?.rootViewController = homeViewController
+                self.view.window?.makeKeyAndVisible()
+            }
+        }
+    }
     
 
 }
